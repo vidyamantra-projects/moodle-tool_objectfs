@@ -53,7 +53,7 @@ class pusher extends manipulator {
      */
     public function __construct(object_file_system $filesystem, stdClass $config, aggregate_logger $logger) {
         parent::__construct($filesystem, $config, $logger);
-        $this->sizethreshold = $config->sizethreshold;
+        $config->duplicateallfiles == 1 ? $this->sizethreshold = 0 : $this->sizethreshold = $config->sizethreshold;
         $this->minimumage = $config->minimumage;
         $this->maximumfilesize = $this->filesystem->get_maximum_upload_filesize();
     }

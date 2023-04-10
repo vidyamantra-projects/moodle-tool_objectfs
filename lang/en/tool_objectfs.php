@@ -176,7 +176,9 @@ $string['settings:deleteexternal_help'] = 'Delete external objects when the file
 <br/>Delete external file on orphan clean-up - This will delete the external file when the delete orphaned metadata task task runs.
 <br/>Delete completely - will tell the external storage to delete the file immediately - (use with caution! - if the same file is being uploaded while being deleted issues could occur.)';
 $string['settings:deletelocal'] = 'Delete local objects';
-$string['settings:deletelocal_help'] = 'Delete local objects once they are in external object storage after the consistency delay.';
+$string['settings:deletelocal_help'] = 'Delete local objects above minimum sizethreshold once they are in external object storage after the consistency delay.';
+$string['settings:duplicateallfiles'] = 'Duplicate all files';
+$string['settings:duplicateallfiles_help'] = 'Duplicate all objects on external storage for full backup/disaster recovery even while keeping the objects less than size threshold on local storage for avoiding latency.';
 $string['settings:consistencydelay'] = 'Consistency delay';
 $string['settings:consistencydelay_help'] = 'How long an object must have existed after being transfered to external object storage before they are a candidate for deletion locally.';
 $string['settings:maxtaskruntime'] = 'Maximum transfer task runtime';
