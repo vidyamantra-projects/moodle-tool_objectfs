@@ -53,7 +53,7 @@ class pusher_candidates extends manipulator_candidates_base {
         $filesystem = new $this->config->filesystem;
         return [
             'maxcreatedtimestamp' => time() - $this->config->minimumage,
-            'threshold' => $this->config->sizethreshold,
+            'threshold' => ($this->config->keepallfilesexternally == 1 ? 0 : $this->config->sizethreshold),
             'maximum_file_size' => $filesystem->get_maximum_upload_filesize(),
             'object_location' => OBJECT_LOCATION_LOCAL,
         ];

@@ -121,7 +121,10 @@ if ($ADMIN->fulltree) {
     $settings->add(new admin_setting_configcheckbox('tool_objectfs/deletelocal',
         new lang_string('settings:deletelocal', 'tool_objectfs'),
         new lang_string('settings:deletelocal_help', 'tool_objectfs'), ''));
-
+    
+    $settings->add(new admin_setting_configcheckbox('tool_objectfs/keepallfilesexternally',
+        new lang_string('settings:keepallfilesexternally', 'tool_objectfs'),
+        new lang_string('settings:keepallfilesexternally_help', 'tool_objectfs'), ''));
     $settings->add(new admin_setting_configduration('tool_objectfs/consistencydelay',
         new lang_string('settings:consistencydelay', 'tool_objectfs'), '', 10 * MINSECS, MINSECS));
 

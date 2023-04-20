@@ -53,6 +53,7 @@ class manager {
         $config->sizethreshold = 1024 * 10;
         $config->minimumage = 7 * DAYSECS;
         $config->deletelocal = 0;
+        $config->keepallfilesexternally = 0;
         $config->consistencydelay = 10 * MINSECS;
         $config->maxtaskruntime = MINSECS;
         $config->logging = 0;
