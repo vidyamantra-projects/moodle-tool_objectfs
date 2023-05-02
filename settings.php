@@ -118,6 +118,9 @@ if ($ADMIN->fulltree) {
     $settings->add(new admin_setting_configduration('tool_objectfs/minimumage',
         new lang_string('settings:minimumage', 'tool_objectfs'), '', 10 * MINSECS, 7 * DAYSECS));
 
+    $settings->add(new admin_setting_configcheckbox('tool_objectfs/duplicateallfiles',
+        new lang_string('settings:duplicateallfiles', 'tool_objectfs'),
+        new lang_string('settings:duplicateallfiles_help', 'tool_objectfs'), ''));
     $settings->add(new admin_setting_configcheckbox('tool_objectfs/deletelocal',
         new lang_string('settings:deletelocal', 'tool_objectfs'),
         new lang_string('settings:deletelocal_help', 'tool_objectfs'), ''));

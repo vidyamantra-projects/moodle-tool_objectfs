@@ -51,6 +51,7 @@ class pusher_candidates extends manipulator_candidates_base {
      */
     public function get_candidates_sql_params() {
         $filesystem = new $this->config->filesystem;
+        $this->config->duplicateallfiles == 1 ? $threshold = 0 : $threshold = $this->config->sizethreshold;
         return [
             'maxcreatedtimestamp' => time() - $this->config->minimumage,
             'threshold' => ($this->config->keepallfilesexternally == 1 ? 0 : $this->config->sizethreshold),
